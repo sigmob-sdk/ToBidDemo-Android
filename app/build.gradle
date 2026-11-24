@@ -6,7 +6,7 @@ android {
     namespace 'com.windmill.android.demo'
     defaultConfig {
         applicationId 'com.windmill.android.demo'
-        minSdkVersion 21
+        minSdkVersion 24
         targetSdkVersion 33
 
         versionCode 1
@@ -24,7 +24,6 @@ android {
             doNotStrip "armeabi.so"
         }
 
-        multiDexEnabled true
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -50,46 +49,62 @@ android {
 }
 
 dependencies {
+    // AndroidX 基础库
     implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core:1.1.0'
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'com.android.support:multidex:1.0.3'
-    implementation fileTree(dir: 'libs', include: ['*.aar'])
+    implementation 'androidx.multidex:multidex:2.0.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.lifecycle:lifecycle-livedata:2.2.0'
+    implementation 'com.google.android.material:material:1.6.1'
 
+    // 网络与解析
+    implementation 'com.squareup.okhttp3:okhttp:4.9.1'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    // 图片与动画
+    implementation 'com.github.bumptech.glide:glide:4.13.2'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.13.2'
+    implementation 'com.airbnb.android:lottie:6.0.1'
+
+    // 存储与数据库
+    implementation 'androidx.room:room-runtime:2.3.0'
+    annotationProcessor 'androidx.room:room-compiler:2.3.0'
+    implementation 'com.tencent:mmkv:1.2.13'
+    implementation 'android.arch.persistence:db-framework:1.1.1'
+
+    // 其他三方 SDK 依赖
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.0.1'
+    implementation 'com.googlecode.android-query:android-query:0.25.9'
+    implementation 'org.jetbrains.kotlin:kotlin-android-extensions-runtime:1.3.72'
+    // implementation 'com.huawei.hms.agd:agdpro-embed:6.3.1.300' // huawei adg
+
+    // 本地 SDK（jar / aar）
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/adscope')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/baidu')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/csj')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/gdt')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/kuaishou')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/meishu')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/mercury')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/qumeng')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/taptap')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/billowlink')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/klevin')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/octopus')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/xbid')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/honor')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/vivo')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/oppo')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/mimo')
-    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/huawei')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/oppoadn')
     implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/huawei-lite')
-
-    implementation 'androidx.core:core:1.1.0'
-    implementation 'androidx.recyclerview:recyclerview:1.2.1'
-
-    implementation 'com.squareup.okhttp3:okhttp:3.14.9'
-
-//    implementation 'com.tencent.mm.opensdk:wechat-sdk-android:6.8.34'
-
-
-//    implementation "com.bytedance.tools.codelocator:codelocator-core:2.0.4"
-//    implementation 'com.hihonor.mcs:ads-identifier:1.0.3.300'
-
-    implementation 'com.github.bumptech.glide:glide:4.9.0'
-    annotationProcessor 'com.github.bumptech.glide:compiler:4.9.0'
-
-    //其中latest.release指代最新Bugly SDK版本号，也可以指定明确的版本号，例如2.2.0
-//    implementation 'com.tencent.bugly:crashreport:latest.release'
-//    implementation 'com.tencent.bugly:nativecrashreport:latest.release'
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/jutui')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/wangmai')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/fanwei')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/kuying')
+    implementation fileTree(include: ['*.jar', '*.aar'], dir: 'libs/AdNetworks/buluken')
 }
