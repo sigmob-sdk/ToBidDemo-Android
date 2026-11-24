@@ -136,13 +136,7 @@ public static final ** CREATOR;
 -dontwarn com.mbridge.**
 -keep class **.R$* { public static final int mbridge*; }
 
-#klevin
--dontwarn com.tencent.tgpa.lite.**
--keep class com.tencent.tgpa.lite.**{*;}
--keep class com.ihoc.mgpa.deviceid.**{*;}
--keep class com.tencent.klevin.**{*;}
-
-# 倍孜混淆
+#AdScope
 -dontwarn com.beizi.fusion.**
 -dontwarn com.beizi.ad.**
 -keep class com.beizi.fusion.** {*; }
@@ -162,10 +156,122 @@ public static final ** CREATOR;
 -keep class com.tencent.qapmsdk.**{*;}
 -keep class okhttp3.** { *; }
 
-
-# TapTap混淆
+#TapADN
 -dontwarn com.tapsdk.**
 -dontwarn com.tapadn.**
 -keep class com.tapsdk.** {*; }
 -keep class com.tapadn.** {*; }
 
+#baidu
+-ignorewarnings
+-dontwarn com.baidu.mobads.sdk.api.**
+-keepclassmembers class * extends android.app.Activity {
+   public void *(android.view.View);
+}
+
+-keepclassmembers enum * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keep class com.baidu.mobads.** { *; }
+-keep class com.style.widget.** {*;}
+-keep class com.component.** {*;}
+-keep class com.baidu.ad.magic.flute.** {*;}
+-keep class com.baidu.mobstat.forbes.** {*;}
+
+#HuaWei
+-keep class com.huawei.openalliance.ad.**{*;}
+
+#HuaWei Ads Lite
+-keep class com.huawei.openalliance.ad.** { *; }
+-keep class com.huawei.hms.ads.** { *; }
+
+#AGD
+-dontwarn com.huawei.appgallery.agd.**
+-keep class com.huawei.appgallery.agd.** {*;}
+-keep interface com.huawei.appgallery.agd.**{ *;}
+
+#oppoadn
+-keep class com.opos.** { *;}
+-keep class com.heytap.** { *;}
+-keep class com.heytap.msp.mobad.** { *;}
+-keep class com.heytap.openid.** {*;}
+
+-keep class okio.**{ *; }
+
+-keeppackagenames com.heytap.nearx.tapplugin
+
+#honor
+-keep class com.hihonor.ads.** {*;}
+-keep class com.hihonor.adsdk.** {*;}
+
+#vivo
+-keepattributes SourceFile,LineNumberTable
+-dontwarn com.squareup.okhttp.**
+-dontwarn okhttp3.**
+-keep class com.vivo.*.** { *; }
+-dontwarn com.bytedance.article.common.nativecrash.NativeCrashInit
+-keep class com.bytedance.sdk.openadsdk.** {*;}
+-keep public interface com.bytedance.sdk.openadsdk.downloadnew.** {*;}
+-keep class com.pgl.sys.ces.* {*;}
+-keep class com.qq.e.** {
+public protected *;
+}
+-keep class android.support.v4.**{
+public *;
+}
+-keep class android.support.v7.widget.** {*;}
+-dontwarn com.vivo.secboxsdk.**
+-keep class com.vivo.secboxsdk.SecBoxCipherException { *; }
+-keep class com.vivo.secboxsdk.jni.SecBoxNative { *; }
+-keep class com.vivo.secboxsdk.BuildConfig { *; }
+-keep class com.kwad.sdk.** { *;}
+-keep class com.ksad.download.** { *;}
+-keep class com.kwai.filedownloader.** { *;}
+
+#meishu
+#GSON
+-keepattributes Signature
+-keepattributes *Annotation*
+-dontwarn sun.misc.**
+-keep class com.google.gson.examples.android.model.** { <fields>; }
+-keep class * implements com.google.gson.TypeAdapterFactory
+-keep class * implements com.google.gson.JsonSerializer
+-keep class * implements com.google.gson.JsonDeserializer
+-keepclassmembers,allowobfuscation class * {
+    @com.google.gson.annotations.SerializedName <fields>;
+}
+#msad
+-keep class com.meishu.sdk.** { *; }
+
+#billowlink
+-dontwarn com.billow.**
+-keep class com.billow.**{ *;}
+-keep interface com.billow.**{ *;}
+
+#Octopus
+-dontwarn com.octopus.**
+-keep class com.octopus.** {*;}
+
+#jutui
+-dontwarn com.jutui.**
+-keep class com.jutui.** {*;}
+
+#wangmai
+-dontwarn com.wangmai.**
+-keep class com.wangmai.** {*;}
+
+#fanwei
+-dontwarn com.ptg.**
+-keep class com.ptg.** {*;}
+
+#kuying
+-dontwarn com.smartdigimkttech.**
+-keep class com.smartdigimkttech.** {*;}
+-keep interface com.smartdigimkttech.** {*;}
+
+#buluken
+-dontwarn com.adprof.sdk.**
+-keep class com.adprof.sdk.** {*;}
+-keep interface com.adprof.**{ *;}

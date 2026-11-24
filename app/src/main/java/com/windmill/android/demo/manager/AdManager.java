@@ -18,18 +18,24 @@ public class AdManager {
     public static final List<String> CHANNELS = new ArrayList<String>() {
         {
             add("SigMob");
-            add("穿山甲");
-            add("快手");
             add("优量汇");
+            add("穿山甲");
             add("百度");
+            add("快手");
             add("ToBid ADX");
             add("AdScope");
-            add("Tap ADN");
             add("趣盟");
-            add("华为");
-            add("荣耀");
             add("美数");
             add("章鱼");
+            add("聚推");
+            add("旺脉");
+            add("泛为");
+            add("酷盈");
+            add("布鲁肯");
+//            add("Tap ADN");
+//            add("荣耀");
+//            add("HUAWEILITE");
+//            add("HUAWEI AGD PRO");
         }
     };
 
@@ -38,18 +44,24 @@ public class AdManager {
 
     static {
         addSigMobAdPlacement();
-        addCjsAdPlacement();
-        addKuaiShouAdPlacement();
         addGdtAdPlacement();
+        addCjsAdPlacement();
         addBaiduAdPlacement();
+        addKuaiShouAdPlacement();
         addToBidAdxAdPlacement();
         addAdScopeAdPlacement();
-        addTapAdnAdPlacement();
         addQuMengAdPlacement();
-        addHuaWeiAdPlacement();
-        addHonorAdPlacement();
         addMeiShuAdPlacement();
         addZhangYuAdPlacement();
+        addJuTuiAdPlacement();
+        addWangMaiAdPlacement();
+        addFanWeiAdPlacement();
+        addKuYingAdPlacement();
+        addBuLuKenAdPlacement();
+//        addTapAdnAdPlacement();
+//        addHonorAdPlacement();
+//        addHuaWeiLiteAdPlacement();
+//        addHuaWeiAgdProAdPlacement();
     }
 
     private static void addSigMobAdPlacement() {
@@ -60,116 +72,27 @@ public class AdManager {
 
         // 插屏广告
         List<AdPlacement> interstitialAds = createAdPlacements(
-                "Sigmob_新插屏_全屏", "8739513476824974",
                 "Sigmob_新插屏_半屏", "2176248928423385",
                 "Sigmob_全屏视频", "4753286031006593"
         );
 
         // 开屏广告
         List<AdPlacement> splashAds = createAdPlacements(
-                "SigMob_开屏广告", "2009470615832232"
+                "Sigmob_开屏", "2009470615832232"
         );
 
         // 原生广告
         List<AdPlacement> nativeAds = createAdPlacements(
-                "SigMob_原生广告", "9224761251541712"
-        );
-
-        // 添加SigMob渠道数据
-        addChannelAdPlacement("SigMob", rewardAds, interstitialAds, splashAds, nativeAds, null);
-    }
-
-    private static void addCjsAdPlacement() {
-        // 激励广告
-        List<AdPlacement> rewardAds = createAdPlacements(
-                "穿山甲_激励视频_模版渲染_横", "2737151569688265",
-                "穿山甲_激励视频_模版渲染_竖", "4742225414998032",
-                "穿山甲_激励视频_自渲染_竖", "8513782885671784"
-        );
-
-        // 插屏广告
-        List<AdPlacement> interstitialAds = createAdPlacements(
-                "穿山甲_插屏广告_新插屏_全屏_混合素材_竖", "9747535575453635",
-                "穿山甲_插屏广告_新插屏_全屏_混合素材_横", "5589653696127381",
-                "穿山甲_插屏广告_新插屏_全屏_图_竖", "5598968818689143",
-                "穿山甲_插屏广告_新插屏_全屏_图_横", "5441713888857882",
-                "穿山甲_插屏广告_新插屏_全屏_视频_竖", "3587278325529654",
-                "穿山甲_插屏广告_新插屏_全屏_视频_横", "7252742468775386",
-                "穿山甲_插屏广告_新插屏_半屏_混合素材_竖", "6734864931635222",
-                "穿山甲_插屏广告_新插屏_半屏_混合素材_横", "8523994857147686",
-                "穿山甲_插屏广告_新插屏_半屏_图_竖", "8858569375814668",
-                "穿山甲_插屏广告_新插屏_半屏_图_横", "9528619564956395",
-                "穿山甲_插屏广告_新插屏_半屏_视频_竖", "6689465581169203",
-                "穿山甲_插屏广告_新插屏_半屏_视频_横", "1249272364839950"
-        );
-
-        // 开屏广告
-        List<AdPlacement> splashAds = createAdPlacements(
-                "穿山甲_开屏广告_自渲染_横", "3735463515583132",
-                "穿山甲_开屏广告_自渲染_竖", "9313386614358887"
-        );
-
-        // 原生广告
-        List<AdPlacement> nativeAds = createAdPlacements(
-                "穿山甲_原生广告_Draw_模版渲染", "9243878171116818",
-                "穿山甲_原生广告_模版渲染_混合素材_优选模版", "7214236327912625",
-                "穿山甲_原生广告_模版渲染_图片_优选模版", "8983115712753298",
-                "穿山甲_原生广告_模版渲染_视频_优选模版", "9766224373323983",
-                "穿山甲_原生广告_自渲染_混合素材", "5771359946996735",
-                "穿山甲_原生广告_自渲染_图片", "8762394945415572",
-                "穿山甲_原生广告_自渲染_视频", "3169995143695363"
+                "Sigmob-demo-信息流", "9224761251541712"
         );
 
         // 横幅广告
         List<AdPlacement> bannerAds = createAdPlacements(
-                "穿山甲_横幅广告_模版渲染", "7697128192498681"
+                "sigmob_横幅", "2457912811137034"
         );
 
-        // 添加穿山甲渠道数据
-        addChannelAdPlacement("穿山甲", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
-    }
-
-    private static void addKuaiShouAdPlacement() {
-        // 激励广告
-        List<AdPlacement> rewardAds = createAdPlacements(
-                "快手广告_激励视频_竖", "7115931754238704",
-                "快手广告_激励视频_横", "3578842147646562"
-        );
-
-        // 插屏广告
-        List<AdPlacement> interstitialAds = createAdPlacements(
-                "快手广告_插屏广告_全屏视频_竖", "8299993567515832",
-                "快手广告_插屏广告_全屏视频_横", "6431771728676629",
-                "快手广告_插屏广告_模版渲染_竖_混合素材", "7734341669262440",
-                "快手广告_插屏广告_模版渲染_竖_视频", "8423875343324245",
-                "快手广告_插屏广告_模版渲染_竖_图", "5566547536353035",
-                "快手广告_插屏广告_模版渲染_横_混合素材", "7168271443874827",
-                "快手广告_插屏广告_模版渲染_横_视频", "9948268656975641",
-                "快手广告_插屏广告_模版渲染_横_图", "1851616859925431"
-        );
-
-        // 开屏广告
-        List<AdPlacement> splashAds = createAdPlacements(
-                "快手广告_开屏广告_模版渲染", "5179213617529365"
-        );
-
-        // 原生广告
-        List<AdPlacement> nativeAds = createAdPlacements(
-                "快手广告_原生广告_Draw", "3969166469641223",
-                "快手广告_原生广告_信息流_模版渲染_混合素材", "2691614432498176",
-                "快手广告_原生广告_信息流_模版渲染_视频", "1786973122784990",
-                "快手广告_原生广告_信息流_模版渲染_图", "7977224773598807",
-                "快手广告_原生广告_信息流_自渲染_混合素材_横", "7871634357816606",
-                "快手广告_原生广告_信息流_自渲染_视频_横", "2792286773817422",
-                "快手广告_原生广告_信息流_自渲染_图_横", "4413248743488239",
-                "快手广告_原生广告_信息流_自渲染_混合素材_竖", "7264823485628063",
-                "快手广告_原生广告_信息流_自渲染_视频_竖", "1567671455752900",
-                "快手广告_原生广告_信息流_自渲染_图_竖", "2953797599858748"
-        );
-
-
-        // 添加快手渠道数据
-        addChannelAdPlacement("快手", rewardAds, interstitialAds, splashAds, nativeAds, null);
+        // 添加SigMob渠道数据
+        addChannelAdPlacement("SigMob", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
     }
 
     private static void addGdtAdPlacement() {
@@ -222,6 +145,57 @@ public class AdManager {
         addChannelAdPlacement("优量汇", rewardAds, interstitialAds, splashAds, nativeAds, null);
     }
 
+    private static void addCjsAdPlacement() {
+        // 激励广告
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "穿山甲_激励视频_模版渲染_横", "2737151569688265",
+                "穿山甲_激励视频_模版渲染_竖", "4742225414998032",
+                "穿山甲_激励视频_自渲染_竖", "8513782885671784"
+        );
+
+        // 插屏广告
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "穿山甲_插屏广告_新插屏_全屏_混合素材_竖", "9747535575453635",
+                "穿山甲_插屏广告_新插屏_全屏_混合素材_横", "5589653696127381",
+                "穿山甲_插屏广告_新插屏_全屏_图_竖", "5598968818689143",
+                "穿山甲_插屏广告_新插屏_全屏_图_横", "5441713888857882",
+                "穿山甲_插屏广告_新插屏_全屏_视频_竖", "3587278325529654",
+                "穿山甲_插屏广告_新插屏_全屏_视频_横", "7252742468775386",
+                "穿山甲_插屏广告_新插屏_半屏_混合素材_竖", "6734864931635222",
+                "穿山甲_插屏广告_新插屏_半屏_混合素材_横", "8523994857147686",
+                "穿山甲_插屏广告_新插屏_半屏_图_竖", "8858569375814668",
+                "穿山甲_插屏广告_新插屏_半屏_图_横", "9528619564956395",
+                "穿山甲_插屏广告_新插屏_半屏_视频_竖", "6689465581169203",
+                "穿山甲_插屏广告_新插屏_半屏_视频_横", "1249272364839950"
+        );
+
+        // 开屏广告
+        List<AdPlacement> splashAds = createAdPlacements(
+                "穿山甲_开屏广告_竖", "3993234887575223",
+                "穿山甲_开屏广告_自渲染_横", "3735463515583132",
+                "穿山甲_开屏广告_自渲染_竖", "9313386614358887"
+        );
+
+        // 原生广告
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "穿山甲_原生广告_Draw_模版渲染", "9243878171116818",
+                "穿山甲_原生广告_模版渲染_混合素材_优选模版", "7214236327912625",
+                "穿山甲_原生广告_模版渲染_图片_优选模版", "8983115712753298",
+                "穿山甲_原生广告_模版渲染_视频_优选模版", "9766224373323983",
+                "穿山甲_原生广告_自渲染_混合素材", "5771359946996735",
+                "穿山甲_原生广告_自渲染_图片", "8762394945415572",
+                "穿山甲_原生广告_自渲染_视频", "3169995143695363"
+        );
+
+        // 横幅广告
+        List<AdPlacement> bannerAds = createAdPlacements(
+                "穿山甲_横幅_模板", "7697128192498681"
+        );
+
+        // 添加穿山甲渠道数据
+        addChannelAdPlacement("穿山甲", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+    }
+
     private static void addBaiduAdPlacement() {
         // 激励广告
         List<AdPlacement> rewardAds = createAdPlacements(
@@ -249,16 +223,50 @@ public class AdManager {
                 "百度联盟_原生广告_自渲染_智能优选", "4356144419563636"
         );
 
-        // 横幅广告
-        List<AdPlacement> bannerAds = createAdPlacements(
-                "百度联盟_横幅广告_20:3", "7464678695349420",
-                "百度联盟_横幅广告_7:3", "9425359578357217",
-                "百度联盟_横幅广告_3:2", "7896898276662026",
-                "百度联盟_横幅广告_2:1", "1144613361889830"
+        // 添加百度渠道数据
+        addChannelAdPlacement("百度", rewardAds, interstitialAds, splashAds, nativeAds, null);
+    }
+
+    private static void addKuaiShouAdPlacement() {
+        // 激励广告
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "快手广告_激励视频_竖", "7115931754238704",
+                "快手广告_激励视频_横", "3578842147646562"
         );
 
-        // 添加百度渠道数据
-        addChannelAdPlacement("百度", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+        // 插屏广告
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "快手广告_插屏广告_全屏视频_竖", "8299993567515832",
+                "快手广告_插屏广告_全屏视频_横", "6431771728676629",
+                "快手广告_插屏广告_模版渲染_竖_混合素材", "7734341669262440",
+                "快手广告_插屏广告_模版渲染_竖_视频", "8423875343324245",
+                "快手广告_插屏广告_模版渲染_竖_图", "5566547536353035",
+                "快手广告_插屏广告_模版渲染_横_混合素材", "7168271443874827",
+                "快手广告_插屏广告_模版渲染_横_视频", "9948268656975641",
+                "快手广告_插屏广告_模版渲染_横_图", "1851616859925431"
+        );
+
+        // 开屏广告
+        List<AdPlacement> splashAds = createAdPlacements(
+                "快手广告_开屏广告_模版渲染", "5179213617529365"
+        );
+
+        // 原生广告
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "快手广告_原生广告_Draw", "3969166469641223",
+                "快手广告_原生广告_信息流_模版渲染_混合素材", "2691614432498176",
+                "快手广告_原生广告_信息流_模版渲染_视频", "1786973122784990",
+                "快手广告_原生广告_信息流_模版渲染_图", "7977224773598807",
+                "快手广告_原生广告_信息流_自渲染_混合素材_横", "7871634357816606",
+                "快手广告_原生广告_信息流_自渲染_视频_横", "2792286773817422",
+                "快手广告_原生广告_信息流_自渲染_图_横", "4413248743488239",
+                "快手广告_原生广告_信息流_自渲染_混合素材_竖", "7264823485628063",
+                "快手广告_原生广告_信息流_自渲染_视频_竖", "1567671455752900",
+                "快手广告_原生广告_信息流_自渲染_图_竖", "2953797599858748"
+        );
+
+        // 添加快手渠道数据
+        addChannelAdPlacement("快手", rewardAds, interstitialAds, splashAds, nativeAds, null);
     }
 
     private static void addToBidAdxAdPlacement() {
@@ -297,37 +305,6 @@ public class AdManager {
         addChannelAdPlacement("AdScope", null, interstitialAds, splashAds, nativeAds, null);
     }
 
-    private static void addTapAdnAdPlacement() {
-        // 激励广告
-        List<AdPlacement> rewardAds = createAdPlacements(
-                "TapADN_激励视频_模版渲染", "2148946584779368"
-        );
-
-        // 插屏广告
-        List<AdPlacement> interstitialAds = createAdPlacements(
-                "TapADN_插屏广告_模版渲染", "3213996581892968"
-        );
-
-        // 开屏广告
-        List<AdPlacement> splashAds = createAdPlacements(
-                "TapADN_开屏广告_模版渲染", "6711484376653465"
-        );
-
-        // 原生广告
-        List<AdPlacement> nativeAds = createAdPlacements(
-                "TapADN_原生广告_自渲染_视频", "9174259568999767",
-                "TapADN_原生广告_自渲染_图文视频", "4462834318853273"
-        );
-
-        // 横幅广告
-        List<AdPlacement> bannerAds = createAdPlacements(
-                "TapADN_横幅广告_模版渲染", "4929885949871825"
-        );
-
-        // 添加Tap ADN渠道数据
-        addChannelAdPlacement("Tap ADN", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
-    }
-
     private static void addQuMengAdPlacement() {
         // 激励广告
         List<AdPlacement> rewardAds = createAdPlacements(
@@ -354,77 +331,6 @@ public class AdManager {
 
         // 添加趣盟渠道数据
         addChannelAdPlacement("趣盟", rewardAds, interstitialAds, splashAds, nativeAds, null);
-    }
-
-    private static void addHuaWeiAdPlacement() {
-        // 激励广告
-        List<AdPlacement> rewardAds = createAdPlacements(
-                "HUAWEI_激励视频_640*360_16:9", "9742938789161474"
-        );
-
-        // 插屏广告
-        List<AdPlacement> interstitialAds = createAdPlacements(
-                "HUAWEI_插屏_图片_1080*1620", "7285721366643055",
-                "HUAWEI_插屏_视频_720*1080", "2787473863473442",
-                "HUAWEI_插屏_图片_720*1280", "9436144224352828",
-                "HUAWEI_插屏_图片_1280*720", "7372695422771205"
-        );
-
-        // 开屏广告
-        List<AdPlacement> splashAds = createAdPlacements(
-                "HUAWEI_开屏_纯图_1080*1920_9:16", "9733484958934916",
-                "HUAWEI_开屏_纯图_1080*1920_2:3", "8271394437764298",
-                "HUAWEI_开屏_视频_720*1280_9:16", "6295535779584675"
-        );
-
-        // 原生广告
-        List<AdPlacement> nativeAds = createAdPlacements(
-                "HUAWEI_原生_大图文_1080*607_16:9", "9798737545245046",
-                "HUAWEI_原生_小图文_160*160_1:1", "8753839997282431",
-                "HUAWEI_原生_小图文_225*150_3:2", "4475465917858814",
-                "HUAWEI_原生_组图文_225*150_3:2", "4898574656515220",
-                "HUAWEI_原生_视频_640*360_16:9", "8886212735168597"
-        );
-
-        // 横幅广告
-        List<AdPlacement> bannerAds = createAdPlacements(
-                "HUAWEI_横幅_纯图_1080*170_108:17", "8548266629265021",
-                "HUAWEI_横幅_纯图_1080*432_135:54", "4353915348695402"
-        );
-
-        // 添加HUAWEI渠道数据
-        addChannelAdPlacement("HUAWEI", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
-    }
-
-    private static void addHonorAdPlacement() {
-        // 激励广告
-        List<AdPlacement> rewardAds = createAdPlacements(
-                "荣耀_激励视频_模版渲染", "1467433168682003"
-        );
-
-        // 插屏广告
-        List<AdPlacement> interstitialAds = createAdPlacements(
-                "荣耀_插屏广告", "1838688954732396"
-        );
-
-        // 开屏广告
-        List<AdPlacement> splashAds = createAdPlacements(
-                "荣耀_开屏广告", "9481612636991620"
-        );
-
-        // 原生广告
-        List<AdPlacement> nativeAds = createAdPlacements(
-                "荣耀_原生广告_自渲染", "5826722687592795",
-                "荣耀_原生广告_模版", "6828256886195186"
-        );
-
-        // 横幅广告
-        List<AdPlacement> bannerAds = createAdPlacements(
-                "荣耀_横幅广告", "1872614968736582"
-        );
-
-        // 添加荣耀渠道数据
-        addChannelAdPlacement("荣耀", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
     }
 
     private static void addMeiShuAdPlacement() {
@@ -488,6 +394,242 @@ public class AdManager {
         // 添加章鱼渠道数据
         addChannelAdPlacement("章鱼", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
     }
+
+    private static void addJuTuiAdPlacement() {
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "聚推_激励视频", "8863723819115879"
+        );
+
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "聚推_插屏广告", "8768289145218655"
+        );
+
+        List<AdPlacement> splashAds = createAdPlacements(
+                "聚推_开屏广告", "3998731352298271"
+        );
+
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "聚推_原生广告_模板", "5734711922849041",
+                "聚推_原生广告_自渲染", "6645584436173437"
+        );
+
+        addChannelAdPlacement("聚推", rewardAds, interstitialAds, splashAds, nativeAds, null);
+    }
+
+    private static void addWangMaiAdPlacement() {
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "旺脉_激励视频", "7147257934316659"
+        );
+
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "旺脉_插屏广告", "5468199242125421"
+        );
+
+        List<AdPlacement> splashAds = createAdPlacements(
+                "旺脉_开屏广告", "1745435952621042"
+        );
+
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "旺脉_原生广告_模板", "1687454429929805",
+                "旺脉_原生广告_自渲染", "4629612954384199"
+        );
+
+        addChannelAdPlacement("旺脉", rewardAds, interstitialAds, splashAds, nativeAds, null);
+    }
+
+    private static void addFanWeiAdPlacement() {
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "泛为_激励视频", "4243877793679580"
+        );
+
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "泛为_插屏广告", "2294256153374369"
+        );
+
+        List<AdPlacement> splashAds = createAdPlacements(
+                "泛为_开屏广告", "6362618993771978"
+        );
+
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "泛为_原生广告_模板", "1195277451268765",
+                "泛为_原生广告_自渲染", "9519929143654164"
+        );
+
+        List<AdPlacement> bannerAds = createAdPlacements(
+                "泛为_横幅广告", "5674551676284553"
+        );
+
+        addChannelAdPlacement("泛为", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+    }
+
+    private static void addKuYingAdPlacement() {
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "酷盈_激励视频", "3351164444654002"
+        );
+
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "酷盈_插屏广告", "1171271914945793"
+        );
+
+        List<AdPlacement> splashAds = createAdPlacements(
+                "酷盈_开屏广告", "9876978231933396"
+        );
+
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "酷盈_原生广告_模板", "6755246357416181",
+                "酷盈_原生广告_自渲染", "8212123125486567"
+        );
+
+        List<AdPlacement> bannerAds = createAdPlacements(
+                "酷盈_横幅广告", "5479581129645968"
+        );
+
+        addChannelAdPlacement("酷盈", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+    }
+
+    private static void addBuLuKenAdPlacement() {
+        List<AdPlacement> rewardAds = createAdPlacements(
+                "布鲁肯_激励视频", "4176893883734606"
+        );
+
+        List<AdPlacement> interstitialAds = createAdPlacements(
+                "布鲁肯_插屏广告", "7127932712248386"
+        );
+
+        List<AdPlacement> splashAds = createAdPlacements(
+                "布鲁肯_开屏广告", "1359862427156000"
+        );
+
+        List<AdPlacement> nativeAds = createAdPlacements(
+                "布鲁肯_原生广告_模板", "1351152468832779",
+                "布鲁肯_原生广告_自渲染", "3682165312697174"
+        );
+
+        List<AdPlacement> bannerAds = createAdPlacements(
+                "布鲁肯_横幅广告", "4542987348328570"
+        );
+
+        addChannelAdPlacement("布鲁肯", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+    }
+
+//    private static void addTapAdnAdPlacement() {
+//        // 激励广告
+//        List<AdPlacement> rewardAds = createAdPlacements(
+//                "TapADN_激励视频_模版渲染", "2148946584779368"
+//        );
+//
+//        // 插屏广告
+//        List<AdPlacement> interstitialAds = createAdPlacements(
+//                "TapADN_插屏广告_模版渲染", "3213996581892968"
+//        );
+//
+//        // 开屏广告
+//        List<AdPlacement> splashAds = createAdPlacements(
+//                "TapADN_开屏广告_模版渲染", "6711484376653465"
+//        );
+//
+//        // 原生广告
+//        List<AdPlacement> nativeAds = createAdPlacements(
+//                "TapADN_原生广告_自渲染_视频", "9174259568999767",
+//                "TapADN_原生广告_自渲染_图文视频", "4462834318853273"
+//        );
+//
+//        // 横幅广告
+//        List<AdPlacement> bannerAds = createAdPlacements(
+//                "TapADN_横幅广告_模版渲染", "4929885949871825"
+//        );
+//
+//        // 添加Tap ADN渠道数据
+//        addChannelAdPlacement("Tap ADN", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+//    }
+
+//    private static void addHonorAdPlacement() {
+//        // 激励广告
+//        List<AdPlacement> rewardAds = createAdPlacements(
+//                "荣耀_激励视频_模版渲染", "1467433168682003"
+//        );
+//
+//        // 插屏广告
+//        List<AdPlacement> interstitialAds = createAdPlacements(
+//                "荣耀_插屏广告", "1838688954732396"
+//        );
+//
+//        // 开屏广告
+//        List<AdPlacement> splashAds = createAdPlacements(
+//                "荣耀_开屏广告", "9481612636991620"
+//        );
+//
+//        // 原生广告
+//        List<AdPlacement> nativeAds = createAdPlacements(
+//                "荣耀_原生广告_自渲染", "5826722687592795",
+//                "荣耀_原生广告_模版", "6828256886195186"
+//        );
+//
+//        // 横幅广告
+//        List<AdPlacement> bannerAds = createAdPlacements(
+//                "荣耀_横幅广告", "1872614968736582"
+//        );
+//
+//        // 添加荣耀渠道数据
+//        addChannelAdPlacement("荣耀", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+//    }
+//
+//    private static void addHuaWeiLiteAdPlacement() {
+//        // 激励广告
+//        List<AdPlacement> rewardAds = createAdPlacements(
+//                "华为lite_激励_视频1", "5788615497727916"
+//        );
+//
+//        // 插屏广告
+//        List<AdPlacement> interstitialAds = createAdPlacements(
+//                "华为lite_插屏_竖屏_图片", "7697939254183058",
+//                "华为lite_插屏_竖屏_视频", "4523229462235451"
+//        );
+//
+//        // 开屏广告
+//        List<AdPlacement> splashAds = createAdPlacements(
+//                "华为lite_开屏_图片", "4994115324549703"
+//        );
+//
+//        // 原生广告
+//        List<AdPlacement> nativeAds = createAdPlacements(
+//                "华为lite_原生_自渲染_小图", "6413899615844336",
+//                "华为lite_原生_自渲染_大图", "1963654989525950",
+//                "华为lite_原生_自渲染_视频", "8777185997661477",
+//                "华为lite_原生_模板渲染_视频", "2932858333652214",
+//                "华为lite_原生_模板渲染_小图", "1928118956549819",
+//                "华为lite_原生_模板渲染_大图", "6657258924293434"
+//        );
+//
+//        // 横幅广告
+//        List<AdPlacement> bannerAds = createAdPlacements(
+//                "华为lite_banner", "6563399519246549",
+//                "华为lite_banner2", "8293966387886604"
+//        );
+//
+//        // 添加HUAWEILITE渠道数据
+//        addChannelAdPlacement("HUAWEILITE", rewardAds, interstitialAds, splashAds, nativeAds, bannerAds);
+//    }
+//
+//    private static void addHuaWeiAgdProAdPlacement() {
+//        List<AdPlacement> rewardAds = createAdPlacements(
+//                "HUAWEI_AGD_PRO_激励视频", "5284899248145038"
+//        );
+
+//        List<AdPlacement> interstitialAds = createAdPlacements(
+//                "HUAWEI_AGD_PRO_插屏广告", "8793561218255817"
+//        );
+//
+//        List<AdPlacement> splashAds = createAdPlacements(
+//                "HUAWEI_AGD_PRO_开屏广告", "7925695958212428"
+//        );
+//
+//        List<AdPlacement> nativeAds = createAdPlacements(
+//                "HUAWEI_AGD_PRO_原生广告_模板", "3532536919927199"
+//        );
+
+//        addChannelAdPlacement("HUAWEI AGD PRO", null, null, null, null, null);
+//    }
 
     /**
      * 根据渠道和广告类型获取广告位列表
